@@ -20,9 +20,9 @@ response = requests.get("http://gaoqing.fm/")
 soup = BeautifulSoup(response.content,"html.parser")
 
 tag = soup.find_all('div',class_="col-md-9")[0]
-for tag1 in tag.find_all('a',target="_blank")[4:100:2]:
+for tag1 in tag.find_all('a',target="_blank")[4:100:2]: #抓取电影名
 	movie.append(tag1.string)
-for tag2 in soup.find_all('span',style="color:#CF0000"):
+for tag2 in soup.find_all('span',style="color:#CF0000"):    #抓取评分
 	pingfeng.append(tag2.string)
 n =len(movie)
 
