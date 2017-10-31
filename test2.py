@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 import sys  
 import usr.sendemail
-
+import io
 try:
     from urllib.parse import urlparse  # py3
 except:
