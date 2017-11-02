@@ -34,5 +34,5 @@ for tag2 in tag[1].find_all('a',target="_blank",style="font-size:12px"):
     list.append(tag2.string)
     # print(tag2.string)
 print (list)   
-
+input()
   
