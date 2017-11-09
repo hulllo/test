@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-import sys  
+import sys
 import usr.sendemail
 import io
 import re
@@ -13,7 +13,7 @@ except:
 import requests
 from bs4 import BeautifulSoup
 list = []
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8') #改变标准输出的默认编码  
+# sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8') #改变标准输出的默认编码
 with open("bbs.txt",'w',encoding='utf-8') as bbs:
     for n in range(10):
         response = requests.get("https://bbs.hassbian.com/forum.php?mod=forumdisplay&fid=38&orderby=dateline&orderby=dateline&filter=author&page="+str(n+1))
@@ -29,7 +29,7 @@ with open("bbs.txt",'w',encoding='utf-8') as bbs:
     # tag2 = tag1.find_all('strong')[0].string
     # p = re.sub("\D", "", tag2)
     # list.append(p)
-    
+
 # print(list)
 # with open('fangjia.txt','a',encoding='utf-8') as fangjia:
     # fangjia.write(list[0]+'\t'+list[1]+'\t'+list[2]+'\n')
