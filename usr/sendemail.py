@@ -34,7 +34,7 @@ def send_(emailsubject,emailcontent):
     # smtp_server = input('SMTP server: ')
         smtp_server = 'smtp-mail.outlook.com'
 
-        msg = MIMEText(emailcontent, 'plain', 'utf-8')
+        msg = MIMEText(emailcontent, 'html', 'utf-8')
         msg['From'] = _format_addr('Python爱好者 <%s>' % from_addr)
         msg['To'] = _format_addr('管理员 <%s>' % to_addr)
         msg['Subject'] = Header(emailsubject, 'utf-8').encode()
